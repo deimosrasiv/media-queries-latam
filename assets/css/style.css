@@ -1,0 +1,122 @@
+/*@import url('https.//fonts.googleapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&display=swap');*/
+
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+body {
+  display: grid;
+  text-align: center;
+  background-image: linear-gradient(315deg, #caf0f8 0%, #caf0f8 20%);
+  height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 10fr 2fr;
+  grid-template-areas:
+    "nav"
+    "aside"
+    "main"
+    "footer";
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Aboreto", cursive;
+  color: #03045e;
+}
+
+nav {
+  grid-area: nav;
+  background: #0077b6;
+}
+
+.price {
+  color: #64c401;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+aside {
+  width: 100%;
+  grid-area: aside;
+  background-color: #00b4d8;
+  color: #03045e;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #002f6c;
+  color: white;
+}
+
+.card {
+  box-shadow: 1px 1px 5px 1px #e1e2e1;
+}
+
+.icon,
+.icon-menu {
+  color: white;
+  width: 20%;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas:
+      "nav nav"
+      "aside main "
+      "footer footer";
+  }
+  .icon {
+    width: 20%;
+  }
+  footer p {
+    color: yellow;
+    font-family: Montserrat;
+    font-size: 16px;
+  }
+  .items {
+    height: 70vh;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    grid-template-columns: 15% 85%;
+    grid-template-areas:
+      "nav aside "
+      "nav main "
+      "footer footer ";
+  }
+  .items {
+    overflow-y: scroll;
+    display: grid;
+    height: 70vh;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  nav li ul {
+    margin-top: 10px;
+  }
+  footer p {
+    color: white;
+    font-family: Montserrat;
+    font-size: 16px;
+  }
+  .icon {
+    width: 30%;
+  }
+}
